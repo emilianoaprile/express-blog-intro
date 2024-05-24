@@ -28,5 +28,10 @@ module.exports = {
                 res.json(posts);
             }
         })
+    },
+    post: (req, res) => {
+        const posts = readJSON('posts');
+        writeJSON('posts', [...posts, req.body]);
+        res.send('Post avvenuto con successo')
     }
 }
