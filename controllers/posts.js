@@ -16,6 +16,11 @@ module.exports = {
                     `;
                     post.tags.forEach(tag => html += `<span>#${tag}</span>`);
                 });
+                html += `
+                <div>
+                    <a href="/">Torna alla home</a>
+                </div>
+                `;
                 html += '</div';
                 res.send(html)
             },
