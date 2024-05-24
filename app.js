@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-const posts = require("./controllers/posts.js")
-console.log(posts)
+const posts = require("./controllers/posts.js");
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.end('Benvenuto nel mio blog!')

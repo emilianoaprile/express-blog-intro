@@ -9,7 +9,7 @@ module.exports = {
                 posts.forEach(post => {
                     html += `
                         <div>
-                            <img src="/${post.image}"/>
+                            <img width="400px" src="/${post.image}"/>
                             <h2>${post.title}</h2>
                             <p>${post.content}</p>
                         </div>
@@ -18,6 +18,9 @@ module.exports = {
                 });
                 html += '</div';
                 res.send(html)
+            },
+            json: () => {
+                res.json(posts);
             }
         })
     }
