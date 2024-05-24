@@ -4,9 +4,11 @@ const port = 3000;
 
 const posts = require("./controllers/posts.js");
 app.use(express.static('public'));
+app.use(express.json());
+
 
 app.get('/', (req, res) => {
-    res.end('Benvenuto nel mio blog!')
+    res.end('<h1>Benvenuto nel mio blog!</h1>')
 })
 
 app.get('/posts', posts.get);
